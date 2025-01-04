@@ -11,7 +11,10 @@ const (
 	generateEndpoint = "/generate"
 )
 
-func (c *Client) Generate(prompt, language string, contentType models.GeneratedContentType) (*models.GenerateResponse, error) {
+func (c *Client) Generate(
+	prompt, language string,
+	contentType models.GeneratedContentType,
+) (*models.GenerateResponse, error) {
 	payload := models.GenerateRequest{
 		Prompt: prompt,
 		Lang:   language,
