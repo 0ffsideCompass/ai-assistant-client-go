@@ -66,6 +66,7 @@ func (c *Client) post(endpoint string, data interface{}) ([]byte, error) {
 
 	req.Header.Set("Content-Type", "application/json")
 	req.Header.Set("API-Key", c.apiKey)
+	req.Header.Set("Autharization", c.apiKey)
 
 	res, err := c.client.Do(req)
 	if err != nil {
